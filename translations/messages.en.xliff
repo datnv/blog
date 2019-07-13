@@ -6,7 +6,7 @@
 <!--|| SITE ||-->
             <trans-unit id="_site.title">
                 <source>site.title</source>
-                <target>Unicorn Blog</target>
+                <target>dat09 blog</target>
             </trans-unit>
             <trans-unit id="_site.tagline">
                 <source>site.tagline</source>
@@ -48,7 +48,7 @@
 <!--|| FOOTER ||-->
             <trans-unit id="_footer.copy">
                 <source>footer.copy</source>
-                <target>Unicorn Blog</target>
+                <target>dat09 blog</target>
             </trans-unit>
             <trans-unit id="_footer.mail.username">
                 <source>footer.mail.username</source>

@@ -1,3 +1,6 @@
 parameters:
     locale: 'en'
     app.locale: 'en|de'
+
+    # Contact email address
+    app.emails.contact_email: 'datnv030691@gmail.com'

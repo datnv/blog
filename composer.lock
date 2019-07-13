@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bb2c2a272330f24d8d4611c0218a330",
+    "content-hash": "21e3a8459d6b8ec631053b73526f9c65",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1445,6 +1445,90 @@
             "time": "2018-11-05T09:00:11+00:00"
         },
         {
+            "name": "mustangx/eu-cookie-law-bundle",
+            "version": "1.0.1",
+            "target-dir": "Eu/CookieLawBundle",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/MustangX/eu-cookie-law-bundle.git",
+                "reference": "7daf199bc372ea464fc3462dd30e8ad427d31b1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v3/projects/MustangX%2Feu-cookie-law-bundle/repository/archive.zip?sha=7daf199bc372ea464fc3462dd30e8ad427d31b1f",
+                "reference": "7daf199bc372ea464fc3462dd30e8ad427d31b1f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Eu\\CookieLawBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Eu Cookie Law Bundle to handle new privacy law",
+            "time": "2017-06-18T18:09:59+00:00"
+        },
+        {
+            "name": "nikolaposa/version",
+            "version": "2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikolaposa/version.git",
+                "reference": "9fd723babf6fccc9ee221e3b987348af0b00a8c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikolaposa/version/zipball/9fd723babf6fccc9ee221e3b987348af0b00a8c7",
+                "reference": "9fd723babf6fccc9ee221e3b987348af0b00a8c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Version\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nikola Poša",
+                    "email": "posa.nikola@gmail.com",
+                    "homepage": "http://www.nikolaposa.in.rs"
+                }
+            ],
+            "description": "Value Object that represents a SemVer-compliant version number.",
+            "homepage": "https://github.com/nikolaposa/version",
+            "keywords": [
+                "semantic",
+                "semver",
+                "version",
+                "versioning"
+            ],
+            "time": "2018-04-22T08:54:55+00:00"
+        },
+        {
             "name": "ocramius/package-versions",
             "version": "1.4.0",
             "source": {
@@ -1979,6 +2063,58 @@
                 "controllers"
             ],
             "time": "2019-07-08T08:31:25+00:00"
+        },
+        {
+            "name": "shivas/versioning-bundle",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shivas/versioning-bundle.git",
+                "reference": "ff92fb096646a1330f1e72cdd8ed83a581079450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shivas/versioning-bundle/zipball/ff92fb096646a1330f1e72cdd8ed83a581079450",
+                "reference": "ff92fb096646a1330f1e72cdd8ed83a581079450",
+                "shasum": ""
+            },
+            "require": {
+                "nikolaposa/version": "^2.2",
+                "php": "^7.0",
+                "symfony/console": "^3.4|^4.0",
+                "symfony/framework-bundle": "^3.4|^4.0",
+                "symfony/process": "^3.4|^4.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Shivas\\VersioningBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Audrius Karabanovas",
+                    "email": "audrius@karabanovas.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony3|4 application versioning, simple console command to manage version (with providers e.g. git tag) of your application using Semantic Versioning 2.0.0 recommendations",
+            "homepage": "https://github.com/shivas/versioning-bundle",
+            "keywords": [
+                "semantic",
+                "semver",
+                "version",
+                "versioning"
+            ],
+            "time": "2018-04-30T06:42:35+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2951,16 +3087,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "a388cacccf6e3c5e5a395e020c5aa05849ea4ccc"
+                "reference": "c949d59794cbbc21e6f886597a5e29c7a7864f00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/a388cacccf6e3c5e5a395e020c5aa05849ea4ccc",
-                "reference": "a388cacccf6e3c5e5a395e020c5aa05849ea4ccc",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/c949d59794cbbc21e6f886597a5e29c7a7864f00",
+                "reference": "c949d59794cbbc21e6f886597a5e29c7a7864f00",
                 "shasum": ""
             },
             "require": {
@@ -2996,7 +3132,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2019-06-28T18:01:09+00:00"
+            "time": "2019-07-11T14:56:17+00:00"
         },
         {
             "name": "symfony/form",
@@ -5051,6 +5187,62 @@
             "time": "2019-06-18T15:27:04+00:00"
         },
         {
+            "name": "symfony/templating",
+            "version": "v4.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/templating.git",
+                "reference": "b0c5295d09dfbeae3bd3f52990468587ed82785c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/templating/zipball/b0c5295d09dfbeae3bd3f52990468587ed82785c",
+                "reference": "b0c5295d09dfbeae3bd3f52990468587ed82785c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "require-dev": {
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "psr/log-implementation": "For using debug logging in loaders"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Templating\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Templating Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-05-30T16:10:05+00:00"
+        },
+        {
             "name": "symfony/translation",
             "version": "v4.3.2",
             "source": {
@@ -6296,16 +6488,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.11.6",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "d262c2cace4d9bca99137a84f6fc6ba909a17e02"
+                "reference": "201d0e050dca336c44f93657ce1f34f3b3868432"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/d262c2cace4d9bca99137a84f6fc6ba909a17e02",
-                "reference": "d262c2cace4d9bca99137a84f6fc6ba909a17e02",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/201d0e050dca336c44f93657ce1f34f3b3868432",
+                "reference": "201d0e050dca336c44f93657ce1f34f3b3868432",
                 "shasum": ""
             },
             "require": {
@@ -6321,12 +6513,14 @@
                 "symfony/http-kernel": "^3.4|^4.0"
             },
             "require-dev": {
-                "allocine/twigcs": "^3.0",
                 "doctrine/doctrine-bundle": "^1.8",
                 "doctrine/orm": "^2.3",
                 "friendsofphp/php-cs-fixer": "^2.8",
-                "symfony/phpunit-bridge": "^3.4|^4.0",
+                "friendsoftwig/twigcs": "^3.1.2",
+                "symfony/http-client": "^4.3",
+                "symfony/phpunit-bridge": "^3.4.19|^4.0",
                 "symfony/process": "^3.4|^4.0",
+                "symfony/security-core": "^3.4|^4.0",
                 "symfony/yaml": "^3.4|^4.0"
             },
             "type": "symfony-bundle",
@@ -6358,7 +6552,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2019-04-19T17:26:45+00:00"
+            "time": "2019-07-09T22:19:18+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",

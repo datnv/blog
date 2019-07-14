@@ -117,6 +117,36 @@
                 <target>Captcha</target>
             </trans-unit>
 
+<!--|| LOGIN (FOSU) ||-->
+            <trans-unit id="_login.login">
+              <source>login.login</source>
+              <target>Anmeldung</target>
+            </trans-unit>
+            <trans-unit id="_login.logout">
+              <source>login.logout</source>
+              <target>Ausloggen</target>
+            </trans-unit>
+            <trans-unit id="_login.register">
+              <source>login.register</source>
+              <target>Registrieren</target>
+            </trans-unit>
+            <trans-unit id="_login.title">
+              <source>login.title</source>
+              <target>Melde dich in deinem Konto an</target>
+            </trans-unit>
+            <trans-unit id="_login.register.title">
+              <source>login.register.title</source>
+              <target>Ein neues Konto eröffnen</target>
+            </trans-unit>
+            <trans-unit id="_login.forgot.password">
+              <source>login.forgot.password</source>
+              <target>Passwort Vergessen</target>
+            </trans-unit>
+            <trans-unit id="_login.submit">
+              <source>login.submit</source>
+              <target>Einreichen</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

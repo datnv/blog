@@ -10,7 +10,7 @@ CREATE TABLE `comment`(
 )
 ;
 
-ALTER TABLE `comment` ADD `c_insert_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `c_ip`,
+ALTER TABLE `comment` ADD `c_insert_date` DATETIME NOT NULL AFTER `c_ip`,
 ADD `c_del_flag` INT NOT NULL DEFAULT '2' AFTER `c_insert_date`,
 ADD `c_update_date` TIMESTAMP NULL AFTER `c_del_flag`,
 ADD `c_insert_id` INT NOT NULL AFTER `c_update_date`,

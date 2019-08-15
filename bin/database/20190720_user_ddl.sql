@@ -5,7 +5,7 @@ CREATE TABLE `user`(
     `u_mail` VARCHAR(200) NOT NULL,
     `u_password` VARCHAR(50) NOT NULL,
     `u_role` INT NOT NULL COMMENT '1: super admin, 2: admin(bloger), 3:viewer',
-    `u_insert_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `u_insert_date` DATETIME NOT NULL,
     `u_insert_id` INT NOT NULL,
     `u_update_date` DATETIME NULL,
     `u_update_id` INT NULL,

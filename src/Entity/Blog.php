@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Blog
  *
- * @ORM\Table(name="blog")
+ * @ORM\Table(name="blog", indexes={@ORM\Index(name="b_url_name", columns={"b_url_name"})})
  * @ORM\Entity
  */
 class Blog
@@ -15,146 +15,184 @@ class Blog
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="b_id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    private $bId;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     * @ORM\Column(name="b_url_name", type="string", length=50, nullable=false, options={"comment"="tên đường dẫn sau tên miền tới trang blog cá nhân của mình"})
      */
-    private $title;
+    private $bUrlName;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="author", type="string", length=100, nullable=false)
+     * @ORM\Column(name="b_allow_comment", type="integer", nullable=false, options={"default"="1","comment"="1: allow, 2: not allow"})
      */
-    private $author;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="blog", type="text", length=0, nullable=false)
-     */
-    private $blog;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=20, nullable=false)
-     */
-    private $image;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="tags", type="text", length=0, nullable=false)
-     */
-    private $tags;
+    private $bAllowComment = '1';
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created", type="datetime", nullable=false)
+     * @ORM\Column(name="b_insert_date", type="datetime", nullable=false)
      */
-    private $created;
+    private $bInsertDate;
 
     /**
-     * @var \DateTime
+     * @var int
      *
-     * @ORM\Column(name="updated", type="datetime", nullable=false)
+     * @ORM\Column(name="b_insert_id", type="integer", nullable=false)
      */
-    private $updated;
+    private $bInsertId;
 
-    public function getId(): ?int
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="b_udpate_date", type="datetime", nullable=true, options={"default"="NULL"})
+     */
+    private $bUdpateDate = NULL;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="b_update_id", type="integer", nullable=true, options={"default"="NULL"})
+     */
+    private $bUpdateId = NULL;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="b_del_flag", type="integer", nullable=false, options={"default"="2","comment"="1: deleted, 2: using"})
+     */
+    private $bDelFlag = '2';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="b_title", type="string", length=200, nullable=false)
+     */
+    private $bTitle;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="b_subtitle", type="string", length=200, nullable=true, options={"default"="NULL"})
+     */
+    private $bSubtitle = NULL;
+
+    public function getBId(): ?int
     {
-        return $this->id;
+        return $this->bId;
     }
 
-    public function getTitle(): ?string
+    public function getBUrlName(): ?string
     {
-        return $this->title;
+        return $this->bUrlName;
     }
 
-    public function setTitle(string $title): self
+    public function setBUrlName(string $bUrlName): self
     {
-        $this->title = $title;
+        $this->bUrlName = $bUrlName;
 
         return $this;
     }
 
-    public function getAuthor(): ?string
+    public function getBAllowComment(): ?int
     {
-        return $this->author;
+        return $this->bAllowComment;
     }
 
-    public function setAuthor(string $author): self
+    public function setBAllowComment(int $bAllowComment): self
     {
-        $this->author = $author;
+        $this->bAllowComment = $bAllowComment;
 
         return $this;
     }
 
-    public function getBlog(): ?string
+    public function getBInsertDate(): ?\DateTimeInterface
     {
-        return $this->blog;
+        return $this->bInsertDate;
     }
 
-    public function setBlog(string $blog): self
+    public function setBInsertDate(\DateTimeInterface $bInsertDate): self
     {
-        $this->blog = $blog;
+        $this->bInsertDate = $bInsertDate;
 
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getBInsertId(): ?int
     {
-        return $this->image;
+        return $this->bInsertId;
     }
 
-    public function setImage(string $image): self
+    public function setBInsertId(int $bInsertId): self
     {
-        $this->image = $image;
+        $this->bInsertId = $bInsertId;
 
         return $this;
     }
 
-    public function getTags(): ?string
+    public function getBUdpateDate(): ?\DateTimeInterface
     {
-        return $this->tags;
+        return $this->bUdpateDate;
     }
 
-    public function setTags(string $tags): self
+    public function setBUdpateDate(?\DateTimeInterface $bUdpateDate): self
     {
-        $this->tags = $tags;
+        $this->bUdpateDate = $bUdpateDate;
 
         return $this;
     }
 
-    public function getCreated(): ?\DateTimeInterface
+    public function getBUpdateId(): ?int
     {
-        return $this->created;
+        return $this->bUpdateId;
     }
 
-    public function setCreated(\DateTimeInterface $created): self
+    public function setBUpdateId(?int $bUpdateId): self
     {
-        $this->created = $created;
+        $this->bUpdateId = $bUpdateId;
 
         return $this;
     }
 
-    public function getUpdated(): ?\DateTimeInterface
+    public function getBDelFlag(): ?int
     {
-        return $this->updated;
+        return $this->bDelFlag;
     }
 
-    public function setUpdated(\DateTimeInterface $updated): self
+    public function setBDelFlag(int $bDelFlag): self
     {
-        $this->updated = $updated;
+        $this->bDelFlag = $bDelFlag;
+
+        return $this;
+    }
+
+    public function getBTitle(): ?string
+    {
+        return $this->bTitle;
+    }
+
+    public function setBTitle(string $bTitle): self
+    {
+        $this->bTitle = $bTitle;
+
+        return $this;
+    }
+
+    public function getBSubtitle(): ?string
+    {
+        return $this->bSubtitle;
+    }
+
+    public function setBSubtitle(?string $bSubtitle): self
+    {
+        $this->bSubtitle = $bSubtitle;
 
         return $this;
     }

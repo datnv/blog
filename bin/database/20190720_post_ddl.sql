@@ -3,7 +3,7 @@ CREATE TABLE `post`(
     `p_discriminator` TEXT NULL,
     `p_title` VARCHAR(200) NOT NULL,
     `p_text` TEXT NOT NULL,
-    `p_insert_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `p_insert_date` DATETIME NOT NULL,
     `p_insert_id` INT NOT NULL,
     `p_blog_id` INT NOT NULL,
     `p_user_id` INT NOT NULL,

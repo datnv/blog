@@ -6,7 +6,7 @@ CREATE TABLE `blog`(
 ;
 
 ALTER TABLE `blog` ADD `b_allow_comment` INT NOT NULL DEFAULT '1' COMMENT '1: allow, 2: not allow' AFTER `b_url_name`,
-ADD `b_insert_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `b_allow_comment`,
+ADD `b_insert_date` DATETIME NOT NULL AFTER `b_allow_comment`,
 ADD `b_insert_id` INT NOT NULL AFTER `b_insert_date`,
 ADD `b_udpate_date` DATETIME NULL AFTER `b_insert_id`,
 ADD `b_update_id` INT NULL AFTER `b_udpate_date`,

@@ -28,7 +28,7 @@
         <!-- Our CSS -->
         <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet"/>
     {% endblock stylesheets %}
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}"/>
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"/>
 </head>
 <body>
 
@@ -55,7 +55,7 @@
                     <hgroup>
                         <h2>
                             {% block blog_title %}
-                                <a href="{{ path('homepage') }}"><img src="{{ asset('images/logo-md.png') }}"/><!--{{ 'site.name'|trans }}--></a>
+{#                                <a href="{{ path('homepage') }}"><img src="{{ asset('images/logo-md-cp.png') }}"/><!--{{ 'site.name'|trans }}--></a>#}
                                 </img>
                             {% endblock blog_title %}
                         </h2>
@@ -145,11 +145,16 @@
 
                 <!--|| The content of the Homepage will be here ||-->
                 <section class="main-col">
-                    {% block body %}{% endblock body %}
+                    {% block body %}
+{#                      TODO  Thiếu form    #}
+
+                    {% endblock body %}
                 </section>
                 <!--|| The content of the Sidebar will be here ||-->
                 <aside class="wrapper sidebar">
-                    {% block sidebar %}{% endblock sidebar %}
+                    {% block sidebar %}
+
+                    {% endblock sidebar %}
                 </aside>
 
             </div>
@@ -192,6 +197,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- FontAweSome JS -->
         <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     {% endblock javascripts %}
 </div>
 </body>

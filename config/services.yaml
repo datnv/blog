@@ -29,6 +29,7 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
@@ -37,3 +38,7 @@ services:
         arguments: ["%kernel.default_locale%"]
         tags:
             - { name: kernel.event_subscriber }
+
+    adm.service.post:
+        class: App\Services\Admin\PostServices
+        public: true

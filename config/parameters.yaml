@@ -4,3 +4,7 @@ parameters:
 
     # Contact email address
     app.emails.contact_email: 'datnv030691@gmail.com'
+
+    user.id: 1
+    blog.id: 1
+    post_photos_directory: '%kernel.root_dir%/../public/uploads/photos/post'

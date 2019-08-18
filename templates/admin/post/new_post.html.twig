@@ -1,0 +1,45 @@
+{# templates/about/about.html.twig #}
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        CKEDITOR.replace( 'content' );
+    </script>
+
+
+{% endblock javascripts %}
+
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Tiêu đề:</label>
+            <input type="text" class="form-control" id="title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label for="content">Nội dung:</label>
+            <textarea class="form-control" rows="5" id="content" name="content"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Loại bài viết(category):</label>
+            <select class="form-control" id="category" name="category">
+                <option value="1">Lập trình</option>
+                <option value="2">Cuộc sống</option>
+                <option value="3">Tiếng Nhật</option>
+                <option value="4">Trải nghiệm</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Tags:</label>
+            <input type="text" class="form-control" id="tags" name="tags">
+        </div>
+        <div class="form-group" name="">
+            <label for="images">Ảnh hiển thị:</label>
+            <input type="file" class="form-control-file border" id="images" name="mainImage">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
